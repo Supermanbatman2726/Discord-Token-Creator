@@ -11,9 +11,6 @@ import subprocess
 import psutil
 import requests
 
-from discord_webhook import DiscordWebhook
-from pypresence import Presence
-from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, JavascriptException, ElementClickInterceptedException
 from selenium.webdriver.common.by import By
@@ -26,6 +23,8 @@ webhook = "INSERT WEBHOOK TO SEND TOKENS TO HERE"
 
 
 def setup():
+	global tokens
+    global indexx
 	default_color = "Fore.CYAN"
 	default_styling = "Style.BRIGHT"
 	useinprint = str(default_color) + str(default_styling)
@@ -33,8 +32,6 @@ def setup():
 	os.system(f'cls')
 	
 def main():
-    global tokens
-    global indexx
     kernel32 = ctypes.windll.kernel32
     kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
     title = 'Token Creator V1 | Created by Local | Total Tokens : ' + str(tokens)
